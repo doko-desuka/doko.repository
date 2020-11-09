@@ -15,16 +15,22 @@
     </addon>
 
 
-    <addon id="plugin.program.orderfavourites" name="Order Favourites" version="1.1.1" provider-name="doko">
-      <requires>
-        <import addon="xbmc.python" version="2.20.0"/>
-      </requires>
-      <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-      </extension>
-      <extension point="xbmc.addon.metadata">
-        <news>
+    <addon id="plugin.program.orderfavourites" name="Order Favourites" version="1.2.0" provider-name="doko">
+        <requires>
+            <import addon="xbmc.python" version="2.20.0"/>
+        </requires>
+        <extension point="xbmc.python.pluginsource" library="default.py">
+            <provides>executable</provides>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <news>
 [COLOR lavender][B]Order Favourites[/B][/COLOR]
+[B]1.2.0:[/B]
+- Fixed a case when the add-on failed to read the favourites file because of Unicode strings.
+(Thanks to [I]msauers[/I] for the report.)
+- Changed the label and description of the 'Restart...' button to 'Restore...', which is
+clearer.
+
 [B]1.1.1:[/B]
 - Added menu items for a more traditional add-on UX.
 - Improved the profile reloading process.
@@ -42,12 +48,11 @@
 
 [B]1.0.2:[/B]
 - Fix for when the favorite item has unicode text.
-        </news>
-        <description lang="en">
+            </news>
+            <description lang="en">
 Lets you reorder the entries in your Favourites.
 Use this to organize your Favourites.
-        </description>
-        <platform>all</platform>
-      </extension>
+            </description>
+            <platform>all</platform>
+        </extension>
     </addon>
-</addons>
